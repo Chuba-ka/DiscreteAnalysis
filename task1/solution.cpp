@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstddef>
 #include <algorithm>
+#include <stdexcept>
+#include <cstring>
 
 template <typename T>
 class Vector
@@ -12,6 +14,11 @@ private:
 
     void reallocate(size_t new_capacity)
     {
+        if (new_capacity < sz)
+        {
+            throw std::logic_error("err: bad reallocation");
+        }
+
         T *new_data = new T[new_capacity];
         for (size_t i = 0; i < sz; ++i)
         {
@@ -81,70 +88,54 @@ struct Pair
 class RadixSorter
 {
 public:
-    static void sort(Vector<Pair> &arr)
+    static void sort(Vector<Pair> &arr, int group_bits = 8)
     {
+
         size_t n = arr.size();
         if (n <= 1)
             return;
 
         Vector<Pair> buffer(n);
-
-        // Указатели на источник и приёмник.
-        // Начинаем: читаем из arr, пишем в buffer.
         Vector<Pair> *src = &arr;
         Vector<Pair> *dst = &buffer;
 
-        // Ключ 64-битный (unsigned long long). Делим его на 8 частей по 8 бит (по 1 байту).
-        // Проходим от младшего байта (shift=0) к старшему (shift=56).
-        // Это LSD (Least Significant Digit) — сначала сортируем по младшим разрядам.
-        for (int shift = 0; shift < 64; shift += 8)
+        const int total_bits = 64;
+
+        for (int shift = 0; shift < total_bits; shift += group_bits)
         {
-            // Массив для подсчёта частот каждого возможного байта (0..255)
-            size_t count[256] = {0};
+            int current_bits = std::min(group_bits, total_bits - shift);
 
-            // --- ШАГ 1: Подсчёт частот (гистограмма) ---
-            // Смотрим на текущий байт каждого элемента в массиве-источнике
+            size_t bucket_count = 1ULL << current_bits;
+
+            unsigned long long mask = bucket_count - 1;
+
+            Vector<size_t> count(bucket_count);
+
+            std::memset(&count[0], 0, bucket_count * sizeof(size_t));
+
             for (size_t i = 0; i < n; ++i)
             {
-                // Сдвигаем ключ вправо на shift бит и маской 0xFF оставляем только младший байт
-                unsigned char byte = ((*src)[i].key >> shift) & 0xFF;
-                count[byte]++; // Увеличиваем счётчик для этого байта
+                size_t bucket = ((*src)[i].key >> shift) & mask;
+                count[bucket]++;
             }
 
-            // --- ШАГ 2: Преобразование частот в стартовые позиции (префиксные суммы) ---
-            // Теперь count[i] будет хранить НЕ количество, а ИНДЕКС в массиве-приёмнике,
-            // с которого нужно начинать вставку элементов с байтом i.
             size_t start_pos = 0;
-            for (int i = 0; i < 256; ++i)
+            for (size_t i = 0; i < bucket_count; ++i)
             {
-                size_t c = count[i];  // Запоминаем, сколько было элементов с байтом i
-                count[i] = start_pos; // Теперь это стартовая позиция для байта i
-                start_pos += c;       // Следующий байт начнётся после этой группы
+                size_t c = count[i];
+                count[i] = start_pos;
+                start_pos += c;
             }
 
-            // --- ШАГ 3: Распределение элементов в массив-приёмник ---
-            // Проходим по исходному массиву СТРОГО ПОДРЯД (это гарантирует стабильность!).
-            // Стабильность: если у двух элементов одинаковый текущий байт,
-            // они попадут в dst в том же порядке, в котором шли в src,
-            // сохраняя результат сортировки по предыдущим (более младшим) байтам.
             for (size_t i = 0; i < n; ++i)
             {
-                unsigned char byte = ((*src)[i].key >> shift) & 0xFF;
-                // Вставляем элемент на предназначенное ему место и сдвигаем указатель
-                (*dst)[count[byte]++] = (*src)[i];
+                size_t bucket = ((*src)[i].key >> shift) & mask;
+                (*dst)[count[bucket]++] = (*src)[i];
             }
 
-            // --- ШАГ 4: Смена ролей массивов ---
-            // Теперь отсортированный (по текущему байту) массив находится в dst.
-            // На следующей итерации он станет ИСТОЧНИКОМ для сортировки по следующему байту.
-            // Меняем указатели, чтобы не копировать данные обратно (экономия O(n) операций).
             std::swap(src, dst);
         }
 
-        // --- ФИНАЛЬНЫЙ ШАГ: Проверка, где оказался результат ---
-        // После 8 итераций (чётное число) данные окажутся в исходном массиве arr.
-        // Если итераций было нечётное количество (в другом коде) — результат в buffer.
-        // Копируем buffer в arr, если нужно.
         if (src != &arr)
         {
             for (size_t i = 0; i < n; ++i)
@@ -157,23 +148,19 @@ public:
 
 int main()
 {
-    // Ускорение ввода-вывода за счёт отключения синхронизации с C-потоками
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(NULL);
 
-    Vector<Pair> data; // Основной массив для хранения пар
+    Vector<Pair> data;
     unsigned long long k, v;
 
-    // Читаем пары ключ-значение из стандартного ввода, пока есть данные
     while (std::cin >> k >> v)
     {
         data.push_back({k, v});
     }
 
-    // Запускаем LSD поразрядную сортировку
-    RadixSorter::sort(data);
+    RadixSorter::sort(data, 16);
 
-    // Выводим результат: ключ и значение через табуляцию
     for (size_t i = 0; i < data.size(); ++i)
     {
         std::cout << data[i].key << "\t" << data[i].value << "\n";
