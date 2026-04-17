@@ -1,0 +1,386 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00     1048     0.00     0.00  __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::base() const
+  0.00      0.00     0.00      524     0.00     0.00  bool __gnu_cxx::operator!=<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)
+  0.00      0.00     0.00      517     0.00     0.00  __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator++()
+  0.00      0.00     0.00      517     0.00     0.00  __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator*() const
+  0.00      0.00     0.00      312     0.00     0.00  std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)
+  0.00      0.00     0.00      312     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)
+  0.00      0.00     0.00      311     0.00     0.00  std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  0.00      0.00     0.00      311     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)
+  0.00      0.00     0.00       17     0.00     0.00  std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+  0.00      0.00     0.00       17     0.00     0.00  bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      0.00     0.00       12     0.00     0.00  std::char_traits<char>::length(char const*)
+  0.00      0.00     0.00       11     0.00     0.00  bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  0.00      0.00     0.00        9     0.00     0.00  std::char_traits<char>::compare(char const*, char const*, unsigned long)
+  0.00      0.00     0.00        7     0.00     0.00  normalize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      0.00     0.00        7     0.00     0.00  Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+  0.00      0.00     0.00        6     0.00     0.00  std::remove_reference<std::pair<bool, unsigned long>&>::type&& std::move<std::pair<bool, unsigned long>&>(std::pair<bool, unsigned long>&)
+  0.00      0.00     0.00        6     0.00     0.00  bool&& std::forward<bool>(std::remove_reference<bool>::type&)
+  0.00      0.00     0.00        3     0.00     0.00  Treap::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long)
+  0.00      0.00     0.00        3     0.00     0.00  Treap::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+  0.00      0.00     0.00        3     0.00     0.00  bool&& std::__pair_get<0ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&)
+  0.00      0.00     0.00        3     0.00     0.00  unsigned long&& std::__pair_get<1ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&)
+  0.00      0.00     0.00        3     0.00     0.00  std::tuple_element<0ul, std::pair<bool, unsigned long> >::type&& std::get<0ul, bool, unsigned long>(std::pair<bool, unsigned long>&&)
+  0.00      0.00     0.00        3     0.00     0.00  std::tuple_element<1ul, std::pair<bool, unsigned long> >::type&& std::get<1ul, bool, unsigned long>(std::pair<bool, unsigned long>&&)
+  0.00      0.00     0.00        3     0.00     0.00  unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>::type&)
+  0.00      0.00     0.00        2     0.00     0.00  Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  Node::~Node()
+  0.00      0.00     0.00        2     0.00     0.00  std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()
+  0.00      0.00     0.00        2     0.00     0.00  std::pair<bool, unsigned long>::pair<bool, unsigned long&, true>(bool&&, unsigned long&)
+  0.00      0.00     0.00        2     0.00     0.00  unsigned long& std::forward<unsigned long&>(std::remove_reference<unsigned long&>::type&)
+  0.00      0.00     0.00        1     0.00     0.00  Treap::rotate_left(Node*)
+  0.00      0.00     0.00        1     0.00     0.00  Treap::erase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      0.00     0.00        1     0.00     0.00  Treap::~Treap()
+  0.00      0.00     0.00        1     0.00     0.00  std::random_device::random_device()
+  0.00      0.00     0.00        1     0.00     0.00  std::random_device::~random_device()
+  0.00      0.00     0.00        1     0.00     0.00  std::random_device::operator()()
+  0.00      0.00     0.00        1     0.00     0.00  std::__new_allocator<char>::~__new_allocator()
+  0.00      0.00     0.00        1     0.00     0.00  std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()
+  0.00      0.00     0.00        1     0.00     0.00  std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)
+  0.00      0.00     0.00        1     0.00     0.00  std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long)
+  0.00      0.00     0.00        1     0.00     0.00  std::pair<bool, unsigned long>::pair<bool, unsigned long long, true>(bool&&, unsigned long long&&)
+  0.00      0.00     0.00        1     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00      0.00     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00      0.00     0.00        1     0.00     0.00  unsigned long long&& std::forward<unsigned long long>(std::remove_reference<unsigned long long>::type&)
+  0.00      0.00     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  0.00      0.00     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00    1048/1048        bool __gnu_cxx::operator!=<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [9]
+[8]      0.0    0.00    0.00    1048         __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::base() const [8]
+-----------------------------------------------
+                0.00    0.00     524/524         normalize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [21]
+[9]      0.0    0.00    0.00     524         bool __gnu_cxx::operator!=<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [9]
+                0.00    0.00    1048/1048        __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::base() const [8]
+-----------------------------------------------
+                0.00    0.00     517/517         normalize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [21]
+[10]     0.0    0.00    0.00     517         __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator++() [10]
+-----------------------------------------------
+                0.00    0.00     517/517         normalize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [21]
+[11]     0.0    0.00    0.00     517         __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator*() const [11]
+-----------------------------------------------
+                0.00    0.00     312/312         unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long) [13]
+[12]     0.0    0.00    0.00     312         std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long) [12]
+-----------------------------------------------
+                0.00    0.00     312/312         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [45]
+[13]     0.0    0.00    0.00     312         unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long) [13]
+                0.00    0.00     312/312         std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long) [12]
+-----------------------------------------------
+                0.00    0.00     311/311         unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long) [15]
+[14]     0.0    0.00    0.00     311         std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long) [14]
+-----------------------------------------------
+                0.00    0.00     311/311         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [45]
+[15]     0.0    0.00    0.00     311         unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long) [15]
+                0.00    0.00     311/311         std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long) [14]
+-----------------------------------------------
+                0.00    0.00       1/17          Treap::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [25]
+                0.00    0.00      16/17          Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [22]
+[16]     0.0    0.00    0.00      17         std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [16]
+                0.00    0.00      17/17          bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [17]
+-----------------------------------------------
+                0.00    0.00      17/17          std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [16]
+[17]     0.0    0.00    0.00      17         bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [17]
+-----------------------------------------------
+                0.00    0.00       1/12          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [49]
+                0.00    0.00      11/12          bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [19]
+[18]     0.0    0.00    0.00      12         std::char_traits<char>::length(char const*) [18]
+-----------------------------------------------
+                0.00    0.00      11/11          main [6]
+[19]     0.0    0.00    0.00      11         bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [19]
+                0.00    0.00      11/12          std::char_traits<char>::length(char const*) [18]
+                0.00    0.00       9/9           std::char_traits<char>::compare(char const*, char const*, unsigned long) [20]
+-----------------------------------------------
+                0.00    0.00       9/9           bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [19]
+[20]     0.0    0.00    0.00       9         std::char_traits<char>::compare(char const*, char const*, unsigned long) [20]
+-----------------------------------------------
+                0.00    0.00       7/7           main [6]
+[21]     0.0    0.00    0.00       7         normalize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [21]
+                0.00    0.00     524/524         bool __gnu_cxx::operator!=<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [9]
+                0.00    0.00     517/517         __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator*() const [11]
+                0.00    0.00     517/517         __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator++() [10]
+-----------------------------------------------
+                0.00    0.00       1/7           Treap::erase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [38]
+                0.00    0.00       3/7           Treap::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [25]
+                0.00    0.00       3/7           Treap::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [26]
+[22]     0.0    0.00    0.00       7         Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [22]
+                0.00    0.00      16/17          std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [16]
+-----------------------------------------------
+                0.00    0.00       3/6           std::tuple_element<0ul, std::pair<bool, unsigned long> >::type&& std::get<0ul, bool, unsigned long>(std::pair<bool, unsigned long>&&) [29]
+                0.00    0.00       3/6           std::tuple_element<1ul, std::pair<bool, unsigned long> >::type&& std::get<1ul, bool, unsigned long>(std::pair<bool, unsigned long>&&) [30]
+[23]     0.0    0.00    0.00       6         std::remove_reference<std::pair<bool, unsigned long>&>::type&& std::move<std::pair<bool, unsigned long>&>(std::pair<bool, unsigned long>&) [23]
+-----------------------------------------------
+                0.00    0.00       1/6           std::pair<bool, unsigned long>::pair<bool, unsigned long long, true>(bool&&, unsigned long long&&) [47]
+                0.00    0.00       2/6           std::pair<bool, unsigned long>::pair<bool, unsigned long&, true>(bool&&, unsigned long&) [35]
+                0.00    0.00       3/6           bool&& std::__pair_get<0ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [27]
+[24]     0.0    0.00    0.00       6         bool&& std::forward<bool>(std::remove_reference<bool>::type&) [24]
+-----------------------------------------------
+                0.00    0.00       3/3           main [6]
+[25]     0.0    0.00    0.00       3         Treap::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [25]
+                0.00    0.00       3/7           Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [22]
+                0.00    0.00       2/2           Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+                0.00    0.00       1/17          std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [16]
+-----------------------------------------------
+                0.00    0.00       3/3           main [6]
+[26]     0.0    0.00    0.00       3         Treap::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [26]
+                0.00    0.00       3/7           Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [22]
+                0.00    0.00       2/2           std::pair<bool, unsigned long>::pair<bool, unsigned long&, true>(bool&&, unsigned long&) [35]
+                0.00    0.00       1/1           std::pair<bool, unsigned long>::pair<bool, unsigned long long, true>(bool&&, unsigned long long&&) [47]
+-----------------------------------------------
+                0.00    0.00       3/3           std::tuple_element<0ul, std::pair<bool, unsigned long> >::type&& std::get<0ul, bool, unsigned long>(std::pair<bool, unsigned long>&&) [29]
+[27]     0.0    0.00    0.00       3         bool&& std::__pair_get<0ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [27]
+                0.00    0.00       3/6           bool&& std::forward<bool>(std::remove_reference<bool>::type&) [24]
+-----------------------------------------------
+                0.00    0.00       3/3           std::tuple_element<1ul, std::pair<bool, unsigned long> >::type&& std::get<1ul, bool, unsigned long>(std::pair<bool, unsigned long>&&) [30]
+[28]     0.0    0.00    0.00       3         unsigned long&& std::__pair_get<1ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [28]
+                0.00    0.00       3/3           unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>::type&) [31]
+-----------------------------------------------
+                0.00    0.00       3/3           main [6]
+[29]     0.0    0.00    0.00       3         std::tuple_element<0ul, std::pair<bool, unsigned long> >::type&& std::get<0ul, bool, unsigned long>(std::pair<bool, unsigned long>&&) [29]
+                0.00    0.00       3/3           bool&& std::__pair_get<0ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [27]
+                0.00    0.00       3/6           std::remove_reference<std::pair<bool, unsigned long>&>::type&& std::move<std::pair<bool, unsigned long>&>(std::pair<bool, unsigned long>&) [23]
+-----------------------------------------------
+                0.00    0.00       3/3           main [6]
+[30]     0.0    0.00    0.00       3         std::tuple_element<1ul, std::pair<bool, unsigned long> >::type&& std::get<1ul, bool, unsigned long>(std::pair<bool, unsigned long>&&) [30]
+                0.00    0.00       3/6           std::remove_reference<std::pair<bool, unsigned long>&>::type&& std::move<std::pair<bool, unsigned long>&>(std::pair<bool, unsigned long>&) [23]
+                0.00    0.00       3/3           unsigned long&& std::__pair_get<1ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [28]
+-----------------------------------------------
+                0.00    0.00       3/3           unsigned long&& std::__pair_get<1ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [28]
+[31]     0.0    0.00    0.00       3         unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>::type&) [31]
+-----------------------------------------------
+                0.00    0.00       2/2           Treap::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [25]
+[32]     0.0    0.00    0.00       2         Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+                0.00    0.00       2/2           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()() [34]
+                0.00    0.00       1/1           std::random_device::random_device() [40]
+                0.00    0.00       1/1           std::random_device::operator()() [42]
+                0.00    0.00       1/1           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [46]
+                0.00    0.00       1/1           std::random_device::~random_device() [41]
+-----------------------------------------------
+                0.00    0.00       1/2           Treap::~Treap() [39]
+                0.00    0.00       1/2           Treap::erase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [38]
+[33]     0.0    0.00    0.00       2         Node::~Node() [33]
+-----------------------------------------------
+                0.00    0.00       2/2           Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+[34]     0.0    0.00    0.00       2         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()() [34]
+                0.00    0.00       1/1           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand() [44]
+-----------------------------------------------
+                0.00    0.00       2/2           Treap::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [26]
+[35]     0.0    0.00    0.00       2         std::pair<bool, unsigned long>::pair<bool, unsigned long&, true>(bool&&, unsigned long&) [35]
+                0.00    0.00       2/6           bool&& std::forward<bool>(std::remove_reference<bool>::type&) [24]
+                0.00    0.00       2/2           unsigned long& std::forward<unsigned long&>(std::remove_reference<unsigned long&>::type&) [36]
+-----------------------------------------------
+                0.00    0.00       2/2           std::pair<bool, unsigned long>::pair<bool, unsigned long&, true>(bool&&, unsigned long&) [35]
+[36]     0.0    0.00    0.00       2         unsigned long& std::forward<unsigned long&>(std::remove_reference<unsigned long&>::type&) [36]
+-----------------------------------------------
+                0.00    0.00       1/1           Treap::erase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [38]
+[37]     0.0    0.00    0.00       1         Treap::rotate_left(Node*) [37]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[38]     0.0    0.00    0.00       1         Treap::erase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [38]
+                0.00    0.00       1/7           Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [22]
+                0.00    0.00       1/1           Treap::rotate_left(Node*) [37]
+                0.00    0.00       1/2           Node::~Node() [33]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[39]     0.0    0.00    0.00       1         Treap::~Treap() [39]
+                0.00    0.00       1/2           Node::~Node() [33]
+-----------------------------------------------
+                0.00    0.00       1/1           Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+[40]     0.0    0.00    0.00       1         std::random_device::random_device() [40]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [49]
+                0.00    0.00       1/1           std::__new_allocator<char>::~__new_allocator() [43]
+-----------------------------------------------
+                0.00    0.00       1/1           Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+[41]     0.0    0.00    0.00       1         std::random_device::~random_device() [41]
+-----------------------------------------------
+                0.00    0.00       1/1           Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+[42]     0.0    0.00    0.00       1         std::random_device::operator()() [42]
+-----------------------------------------------
+                0.00    0.00       1/1           std::random_device::random_device() [40]
+[43]     0.0    0.00    0.00       1         std::__new_allocator<char>::~__new_allocator() [43]
+-----------------------------------------------
+                0.00    0.00       1/1           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()() [34]
+[44]     0.0    0.00    0.00       1         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand() [44]
+-----------------------------------------------
+                0.00    0.00       1/1           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [46]
+[45]     0.0    0.00    0.00       1         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [45]
+                0.00    0.00     312/312         unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long) [13]
+                0.00    0.00     311/311         unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long) [15]
+-----------------------------------------------
+                0.00    0.00       1/1           Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [32]
+[46]     0.0    0.00    0.00       1         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [46]
+                0.00    0.00       1/1           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [45]
+-----------------------------------------------
+                0.00    0.00       1/1           Treap::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [26]
+[47]     0.0    0.00    0.00       1         std::pair<bool, unsigned long>::pair<bool, unsigned long long, true>(bool&&, unsigned long long&&) [47]
+                0.00    0.00       1/6           bool&& std::forward<bool>(std::remove_reference<bool>::type&) [24]
+                0.00    0.00       1/1           unsigned long long&& std::forward<unsigned long long>(std::remove_reference<unsigned long long>::type&) [50]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [49]
+[48]     0.0    0.00    0.00       1         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [48]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [51]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [52]
+-----------------------------------------------
+                0.00    0.00       1/1           std::random_device::random_device() [40]
+[49]     0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [49]
+                0.00    0.00       1/12          std::char_traits<char>::length(char const*) [18]
+                0.00    0.00       1/1           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [48]
+-----------------------------------------------
+                0.00    0.00       1/1           std::pair<bool, unsigned long>::pair<bool, unsigned long long, true>(bool&&, unsigned long long&&) [47]
+[50]     0.0    0.00    0.00       1         unsigned long long&& std::forward<unsigned long long>(std::remove_reference<unsigned long long>::type&) [50]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [48]
+[51]     0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [51]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [48]
+[52]     0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [52]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [21] normalize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [28] unsigned long&& std::__pair_get<1ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [12] std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)
+  [32] Node::Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [18] std::char_traits<char>::length(char const*) [14] std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  [33] Node::~Node()          [20] std::char_traits<char>::compare(char const*, char const*, unsigned long) [13] unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)
+  [37] Treap::rotate_left(Node*) [40] std::random_device::random_device() [15] unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)
+  [38] Treap::erase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [41] std::random_device::~random_device() [29] std::tuple_element<0ul, std::pair<bool, unsigned long> >::type&& std::get<0ul, bool, unsigned long>(std::pair<bool, unsigned long>&&)
+  [25] Treap::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) [42] std::random_device::operator()() [30] std::tuple_element<1ul, std::pair<bool, unsigned long> >::type&& std::get<1ul, bool, unsigned long>(std::pair<bool, unsigned long>&&)
+  [39] Treap::~Treap()        [43] std::__new_allocator<char>::~__new_allocator() [23] std::remove_reference<std::pair<bool, unsigned long>&>::type&& std::move<std::pair<bool, unsigned long>&>(std::pair<bool, unsigned long>&)
+  [10] __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator++() [44] std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand() [36] unsigned long& std::forward<unsigned long&>(std::remove_reference<unsigned long&>::type&)
+   [9] bool __gnu_cxx::operator!=<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [45] std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [24] bool&& std::forward<bool>(std::remove_reference<bool>::type&)
+  [26] Treap::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [46] std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [31] unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>::type&)
+  [22] Treap::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [34] std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()() [50] unsigned long long&& std::forward<unsigned long long>(std::remove_reference<unsigned long long>::type&)
+   [8] __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::base() const [35] std::pair<bool, unsigned long>::pair<bool, unsigned long&, true>(bool&&, unsigned long&) [19] bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  [11] __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator*() const [47] std::pair<bool, unsigned long>::pair<bool, unsigned long long, true>(bool&&, unsigned long long&&) [17] bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [16] std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [48] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [51] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  [27] bool&& std::__pair_get<0ul>::__move_get<bool, unsigned long>(std::pair<bool, unsigned long>&&) [49] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [52] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
