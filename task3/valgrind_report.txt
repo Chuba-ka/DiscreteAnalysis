@@ -1,62 +1,62 @@
-==25644== Memcheck, a memory error detector
-==25644== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==25644== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==25644== Command: ./dict
-==25644== Parent PID: 1759
-==25644== 
-==25644== 
-==25644== HEAP SUMMARY:
-==25644==     in use at exit: 122,880 bytes in 6 blocks
-==25644==   total heap usage: 18 allocs, 12 frees, 229,438 bytes allocated
-==25644== 
-==25644== 8,192 bytes in 1 blocks are still reachable in loss record 1 of 6
-==25644==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25644==    by 0x4992E3A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4990AB2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4938CBD: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x10A851: main (dict.cpp:261)
-==25644== 
-==25644== 8,192 bytes in 1 blocks are still reachable in loss record 2 of 6
-==25644==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25644==    by 0x4992E3A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4990AB2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4938CDD: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x10A851: main (dict.cpp:261)
-==25644== 
-==25644== 8,192 bytes in 1 blocks are still reachable in loss record 3 of 6
-==25644==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25644==    by 0x4992E3A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4990AB2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4938CFE: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x10A851: main (dict.cpp:261)
-==25644== 
-==25644== 32,768 bytes in 1 blocks are still reachable in loss record 4 of 6
-==25644==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25644==    by 0x4994C6D: std::basic_filebuf<wchar_t, std::char_traits<wchar_t> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4990C82: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4938D7A: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x10A851: main (dict.cpp:261)
-==25644== 
-==25644== 32,768 bytes in 1 blocks are still reachable in loss record 5 of 6
-==25644==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25644==    by 0x4994C6D: std::basic_filebuf<wchar_t, std::char_traits<wchar_t> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4990C82: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4938D9A: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x10A851: main (dict.cpp:261)
-==25644== 
-==25644== 32,768 bytes in 1 blocks are still reachable in loss record 6 of 6
-==25644==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25644==    by 0x4994C6D: std::basic_filebuf<wchar_t, std::char_traits<wchar_t> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4990C82: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x4938DB4: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
-==25644==    by 0x10A851: main (dict.cpp:261)
-==25644== 
-==25644== LEAK SUMMARY:
-==25644==    definitely lost: 0 bytes in 0 blocks
-==25644==    indirectly lost: 0 bytes in 0 blocks
-==25644==      possibly lost: 0 bytes in 0 blocks
-==25644==    still reachable: 122,880 bytes in 6 blocks
-==25644==         suppressed: 0 bytes in 0 blocks
-==25644== 
-==25644== For lists of detected and suppressed errors, rerun with: -s
-==25644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==65126== Memcheck, a memory error detector
+==65126== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==65126== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==65126== Command: ./dict
+==65126== Parent PID: 63812
+==65126== 
+==65126== 
+==65126== HEAP SUMMARY:
+==65126==     in use at exit: 122,880 bytes in 6 blocks
+==65126==   total heap usage: 39 allocs, 33 frees, 215,202 bytes allocated
+==65126== 
+==65126== 8,192 bytes in 1 blocks are still reachable in loss record 1 of 6
+==65126==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65126==    by 0x4992E3A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4990AB2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4938CBD: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x109463: main (dict.cpp:242)
+==65126== 
+==65126== 8,192 bytes in 1 blocks are still reachable in loss record 2 of 6
+==65126==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65126==    by 0x4992E3A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4990AB2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4938CDD: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x109463: main (dict.cpp:242)
+==65126== 
+==65126== 8,192 bytes in 1 blocks are still reachable in loss record 3 of 6
+==65126==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65126==    by 0x4992E3A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4990AB2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4938CFE: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x109463: main (dict.cpp:242)
+==65126== 
+==65126== 32,768 bytes in 1 blocks are still reachable in loss record 4 of 6
+==65126==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65126==    by 0x4994C6D: std::basic_filebuf<wchar_t, std::char_traits<wchar_t> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4990C82: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4938D7A: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x109463: main (dict.cpp:242)
+==65126== 
+==65126== 32,768 bytes in 1 blocks are still reachable in loss record 5 of 6
+==65126==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65126==    by 0x4994C6D: std::basic_filebuf<wchar_t, std::char_traits<wchar_t> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4990C82: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4938D9A: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x109463: main (dict.cpp:242)
+==65126== 
+==65126== 32,768 bytes in 1 blocks are still reachable in loss record 6 of 6
+==65126==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65126==    by 0x4994C6D: std::basic_filebuf<wchar_t, std::char_traits<wchar_t> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4990C82: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x4938DB4: std::ios_base::sync_with_stdio(bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.34)
+==65126==    by 0x109463: main (dict.cpp:242)
+==65126== 
+==65126== LEAK SUMMARY:
+==65126==    definitely lost: 0 bytes in 0 blocks
+==65126==    indirectly lost: 0 bytes in 0 blocks
+==65126==      possibly lost: 0 bytes in 0 blocks
+==65126==    still reachable: 122,880 bytes in 6 blocks
+==65126==         suppressed: 0 bytes in 0 blocks
+==65126== 
+==65126== For lists of detected and suppressed errors, rerun with: -s
+==65126== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
