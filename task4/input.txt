@@ -1,5 +1,6 @@
-cat ? dog
-cat
-cat
-dog
-dog
+north
+north wind
+cold ? wind
+windy
+
+the cold strong wind north wind windy day
