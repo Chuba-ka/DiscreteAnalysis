@@ -1,6 +1,3 @@
-north
-north wind
-cold ? wind
-windy
+t o p
 
-the cold strong wind north wind windy day
+a b c a t n i p t o p
