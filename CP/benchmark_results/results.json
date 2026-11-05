@@ -1,0 +1,1492 @@
+{
+  "metadata": {
+    "date": "2026-11-05T19:14:39.838056+03:00",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+    "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+    "flags": "-std=c++23 -O2 -DNDEBUG",
+    "source_sha256": "2d624b5bf4b4834ce6ef76b2e37e0a9ea4a4b571962f44cd8408c3c79bfd24aa",
+    "seed": "8062026 + длина строки",
+    "samples": 5,
+    "batch_min_ms": 20,
+    "cli_repetitions": 3,
+    "cpu": "AMD Ryzen 5 7430U with Radeon Graphics",
+    "memory_kib": 15202032
+  },
+  "cases": [
+    {
+      "family": "constant",
+      "size": 1000,
+      "input_sha256": "41edece42d63e8d9bf515a9ba6932e1c20cbc9f5a5d134645adb5db1b9737ea3",
+      "runs": 3,
+      "encoded_bytes": 14,
+      "ratio": 0.014,
+      "zero_fraction": 0.998001998001998,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.1152086055,
+          "min_ms": 0.1147897695,
+          "max_ms": 0.1197857148
+        },
+        "mtf_encode": {
+          "median_ms": 0.009204490723,
+          "min_ms": 0.009199623047,
+          "max_ms": 0.009224946533
+        },
+        "rle_encode": {
+          "median_ms": 0.0006535481873,
+          "min_ms": 0.0006512902222,
+          "max_ms": 0.0006579467163
+        },
+        "rle_decode": {
+          "median_ms": 0.0003672621002,
+          "min_ms": 0.0003610593414,
+          "max_ms": 0.0003720348511
+        },
+        "mtf_decode": {
+          "median_ms": 0.003990597717,
+          "min_ms": 0.003984110291,
+          "max_ms": 0.004001938599
+        },
+        "bwt_decode": {
+          "median_ms": 0.005666569092,
+          "min_ms": 0.005648676514,
+          "max_ms": 0.005693817627
+        },
+        "compress": {
+          "median_ms": 0.1254470078,
+          "min_ms": 0.1252825977,
+          "max_ms": 0.1255960781
+        },
+        "decompress": {
+          "median_ms": 0.009976924805,
+          "min_ms": 0.009787320801,
+          "max_ms": 0.01159335303
+        }
+      },
+      "cli_ms": {
+        "compress": 5.553036,
+        "decompress": 4.515397
+      },
+      "rss_kib": {
+        "compress": 4084,
+        "decompress": 4104
+      }
+    },
+    {
+      "family": "constant",
+      "size": 5000,
+      "input_sha256": "c526c6222044dab5674de9c4ac7f4566ebb5e4d8bf9d8ea34c9cc8a7cc3c869c",
+      "runs": 3,
+      "encoded_bytes": 15,
+      "ratio": 0.003,
+      "zero_fraction": 0.9996000799840032,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.7135001875,
+          "min_ms": 0.7123524062,
+          "max_ms": 0.7148746563
+        },
+        "mtf_encode": {
+          "median_ms": 0.04616970898,
+          "min_ms": 0.04609793359,
+          "max_ms": 0.04623794336
+        },
+        "rle_encode": {
+          "median_ms": 0.00315582959,
+          "min_ms": 0.003059173828,
+          "max_ms": 0.003218180908
+        },
+        "rle_decode": {
+          "median_ms": 0.001643194275,
+          "min_ms": 0.001615189453,
+          "max_ms": 0.001662554382
+        },
+        "mtf_decode": {
+          "median_ms": 0.0199244292,
+          "min_ms": 0.01986479541,
+          "max_ms": 0.01996224414
+        },
+        "bwt_decode": {
+          "median_ms": 0.02713446973,
+          "min_ms": 0.0271316709,
+          "max_ms": 0.02715711914
+        },
+        "compress": {
+          "median_ms": 0.7615579375,
+          "min_ms": 0.7599946875,
+          "max_ms": 0.762794625
+        },
+        "decompress": {
+          "median_ms": 0.04815721094,
+          "min_ms": 0.04791043945,
+          "max_ms": 0.04817194531
+        }
+      },
+      "cli_ms": {
+        "compress": 4.842582,
+        "decompress": 3.807548
+      },
+      "rss_kib": {
+        "compress": 4000,
+        "decompress": 4104
+      }
+    },
+    {
+      "family": "constant",
+      "size": 10000,
+      "input_sha256": "27dd1f61b867b6a0f6e9d8a41c43231de52107e53ae424de8f847b821db4b711",
+      "runs": 3,
+      "encoded_bytes": 15,
+      "ratio": 0.0015,
+      "zero_fraction": 0.9998000199980002,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 1.540288125,
+          "min_ms": 1.532563,
+          "max_ms": 1.543078375
+        },
+        "mtf_encode": {
+          "median_ms": 0.09139464062,
+          "min_ms": 0.09122572656,
+          "max_ms": 0.09181104687
+        },
+        "rle_encode": {
+          "median_ms": 0.01745061914,
+          "min_ms": 0.00622901416,
+          "max_ms": 0.01746442969
+        },
+        "rle_decode": {
+          "median_ms": 0.003409406372,
+          "min_ms": 0.003217325806,
+          "max_ms": 0.003753599976
+        },
+        "mtf_decode": {
+          "median_ms": 0.04027438379,
+          "min_ms": 0.03990519434,
+          "max_ms": 0.0436910332
+        },
+        "bwt_decode": {
+          "median_ms": 0.05411564258,
+          "min_ms": 0.05402185352,
+          "max_ms": 0.05481529688
+        },
+        "compress": {
+          "median_ms": 1.638872,
+          "min_ms": 1.6368895,
+          "max_ms": 1.643866937
+        },
+        "decompress": {
+          "median_ms": 0.0963058125,
+          "min_ms": 0.09584541406,
+          "max_ms": 0.09675485938
+        }
+      },
+      "cli_ms": {
+        "compress": 5.166971,
+        "decompress": 3.997165
+      },
+      "rss_kib": {
+        "compress": 4256,
+        "decompress": 4080
+      }
+    },
+    {
+      "family": "constant",
+      "size": 50000,
+      "input_sha256": "77a0f923b96d18567b52376c56638acc5f030009735888bc47f2da5b4b65e3af",
+      "runs": 3,
+      "encoded_bytes": 16,
+      "ratio": 0.00032,
+      "zero_fraction": 0.999960000799984,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 9.48331225,
+          "min_ms": 9.4707685,
+          "max_ms": 9.559538
+        },
+        "mtf_encode": {
+          "median_ms": 0.4616589375,
+          "min_ms": 0.4578712031,
+          "max_ms": 0.4645964844
+        },
+        "rle_encode": {
+          "median_ms": 0.03118270508,
+          "min_ms": 0.03075432227,
+          "max_ms": 0.03351675586
+        },
+        "rle_decode": {
+          "median_ms": 0.01606011865,
+          "min_ms": 0.01603190088,
+          "max_ms": 0.01613681494
+        },
+        "mtf_decode": {
+          "median_ms": 0.2054376562,
+          "min_ms": 0.2049880625,
+          "max_ms": 0.2063472148
+        },
+        "bwt_decode": {
+          "median_ms": 0.2736774141,
+          "min_ms": 0.2727666406,
+          "max_ms": 0.2743396719
+        },
+        "compress": {
+          "median_ms": 10.0961905,
+          "min_ms": 9.9843055,
+          "max_ms": 10.698238
+        },
+        "decompress": {
+          "median_ms": 0.6319718125,
+          "min_ms": 0.6316027187,
+          "max_ms": 0.6368159062
+        }
+      },
+      "cli_ms": {
+        "compress": 14.323572,
+        "decompress": 4.787479
+      },
+      "rss_kib": {
+        "compress": 4732,
+        "decompress": 4196
+      }
+    },
+    {
+      "family": "constant",
+      "size": 100000,
+      "input_sha256": "6d1cf22d7cc09b085dfc25ee1a1f3ae0265804c607bc2074ad253bcc82fd81ee",
+      "runs": 3,
+      "encoded_bytes": 16,
+      "ratio": 0.00016,
+      "zero_fraction": 0.999980000199998,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 20.331672,
+          "min_ms": 20.10147,
+          "max_ms": 20.469171
+        },
+        "mtf_encode": {
+          "median_ms": 0.9238300938,
+          "min_ms": 0.9218510625,
+          "max_ms": 0.9244371563
+        },
+        "rle_encode": {
+          "median_ms": 0.1367019688,
+          "min_ms": 0.06058108594,
+          "max_ms": 0.1748149297
+        },
+        "rle_decode": {
+          "median_ms": 0.03224716406,
+          "min_ms": 0.03208443652,
+          "max_ms": 0.03368405176
+        },
+        "mtf_decode": {
+          "median_ms": 0.4038143203,
+          "min_ms": 0.4027954531,
+          "max_ms": 0.4047878672
+        },
+        "bwt_decode": {
+          "median_ms": 0.550122375,
+          "min_ms": 0.5490199844,
+          "max_ms": 0.5510033906
+        },
+        "compress": {
+          "median_ms": 21.422109,
+          "min_ms": 21.121205,
+          "max_ms": 21.492061
+        },
+        "decompress": {
+          "median_ms": 1.337722125,
+          "min_ms": 1.322954437,
+          "max_ms": 1.381421063
+        }
+      },
+      "cli_ms": {
+        "compress": 26.619517,
+        "decompress": 6.020723
+      },
+      "rss_kib": {
+        "compress": 5896,
+        "decompress": 4668
+      }
+    },
+    {
+      "family": "periodic",
+      "size": 1000,
+      "input_sha256": "92f529f78de737ee2955aef3dbf87cf3c30458a882d73fe95b7ef1b2143cd2bf",
+      "runs": 14,
+      "encoded_bytes": 66,
+      "ratio": 0.066,
+      "zero_fraction": 0.9920079920079921,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.1076847148,
+          "min_ms": 0.1076690195,
+          "max_ms": 0.1078240781
+        },
+        "mtf_encode": {
+          "median_ms": 0.009551081299,
+          "min_ms": 0.009533010498,
+          "max_ms": 0.009655916992
+        },
+        "rle_encode": {
+          "median_ms": 0.0007455721436,
+          "min_ms": 0.0007336369629,
+          "max_ms": 0.0007956931152
+        },
+        "rle_decode": {
+          "median_ms": 0.0004748074493,
+          "min_ms": 0.0004730409851,
+          "max_ms": 0.0004768088837
+        },
+        "mtf_decode": {
+          "median_ms": 0.004170538818,
+          "min_ms": 0.004080606812,
+          "max_ms": 0.004265771362
+        },
+        "bwt_decode": {
+          "median_ms": 0.005225516357,
+          "min_ms": 0.005205038574,
+          "max_ms": 0.00522897998
+        },
+        "compress": {
+          "median_ms": 0.118188457,
+          "min_ms": 0.1180612656,
+          "max_ms": 0.1183941562
+        },
+        "decompress": {
+          "median_ms": 0.009548263184,
+          "min_ms": 0.009524718262,
+          "max_ms": 0.009556193359
+        }
+      },
+      "cli_ms": {
+        "compress": 3.441011,
+        "decompress": 3.982147
+      },
+      "rss_kib": {
+        "compress": 4108,
+        "decompress": 3932
+      }
+    },
+    {
+      "family": "periodic",
+      "size": 5000,
+      "input_sha256": "d3a0772ad83bca1be88f3a2df2d6fb282b46b045544d30e4e1fb42bc3e540216",
+      "runs": 17,
+      "encoded_bytes": 84,
+      "ratio": 0.0168,
+      "zero_fraction": 0.998000399920016,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.6979375313,
+          "min_ms": 0.695509875,
+          "max_ms": 0.698439125
+        },
+        "mtf_encode": {
+          "median_ms": 0.04753710156,
+          "min_ms": 0.04726279883,
+          "max_ms": 0.04789744531
+        },
+        "rle_encode": {
+          "median_ms": 0.003208897949,
+          "min_ms": 0.003203864258,
+          "max_ms": 0.003227981934
+        },
+        "rle_decode": {
+          "median_ms": 0.001748824097,
+          "min_ms": 0.001735668945,
+          "max_ms": 0.001757275635
+        },
+        "mtf_decode": {
+          "median_ms": 0.0199242041,
+          "min_ms": 0.0198921958,
+          "max_ms": 0.01997082959
+        },
+        "bwt_decode": {
+          "median_ms": 0.02679400684,
+          "min_ms": 0.02677081836,
+          "max_ms": 0.02680916211
+        },
+        "compress": {
+          "median_ms": 0.7516959687,
+          "min_ms": 0.7494060625,
+          "max_ms": 0.757509375
+        },
+        "decompress": {
+          "median_ms": 0.04876555859,
+          "min_ms": 0.04845560352,
+          "max_ms": 0.05143343945
+        }
+      },
+      "cli_ms": {
+        "compress": 3.906414,
+        "decompress": 4.279725
+      },
+      "rss_kib": {
+        "compress": 4096,
+        "decompress": 4100
+      }
+    },
+    {
+      "family": "periodic",
+      "size": 10000,
+      "input_sha256": "15c4ce9baf2085a4ececf70fcaba2da7a266eac84bcaa74a12813a75c309d35d",
+      "runs": 16,
+      "encoded_bytes": 81,
+      "ratio": 0.0081,
+      "zero_fraction": 0.9991000899910009,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 1.535290562,
+          "min_ms": 1.525407063,
+          "max_ms": 1.6019
+        },
+        "mtf_encode": {
+          "median_ms": 0.09244798438,
+          "min_ms": 0.09207118359,
+          "max_ms": 0.09353881641
+        },
+        "rle_encode": {
+          "median_ms": 0.006376958008,
+          "min_ms": 0.006338223145,
+          "max_ms": 0.007477740723
+        },
+        "rle_decode": {
+          "median_ms": 0.003430733032,
+          "min_ms": 0.003381496338,
+          "max_ms": 0.00356011792
+        },
+        "mtf_decode": {
+          "median_ms": 0.04029449902,
+          "min_ms": 0.04020665918,
+          "max_ms": 0.0407584668
+        },
+        "bwt_decode": {
+          "median_ms": 0.05389620898,
+          "min_ms": 0.05389383984,
+          "max_ms": 0.05393137109
+        },
+        "compress": {
+          "median_ms": 1.626407938,
+          "min_ms": 1.62460075,
+          "max_ms": 1.637312813
+        },
+        "decompress": {
+          "median_ms": 0.09559279297,
+          "min_ms": 0.095471,
+          "max_ms": 0.09566253516
+        }
+      },
+      "cli_ms": {
+        "compress": 5.493343,
+        "decompress": 3.177376
+      },
+      "rss_kib": {
+        "compress": 4236,
+        "decompress": 4096
+      }
+    },
+    {
+      "family": "periodic",
+      "size": 50000,
+      "input_sha256": "155b9b42fb29535ae8356ae8088387950e6d198a8c1af47fa4369ef050b605c8",
+      "runs": 16,
+      "encoded_bytes": 87,
+      "ratio": 0.00174,
+      "zero_fraction": 0.999820003599928,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 9.52205475,
+          "min_ms": 9.460667,
+          "max_ms": 9.55228175
+        },
+        "mtf_encode": {
+          "median_ms": 0.4618926562,
+          "min_ms": 0.4614560625,
+          "max_ms": 0.4647951406
+        },
+        "rle_encode": {
+          "median_ms": 0.03050420313,
+          "min_ms": 0.03035869531,
+          "max_ms": 0.03209120703
+        },
+        "rle_decode": {
+          "median_ms": 0.0161414624,
+          "min_ms": 0.01605774561,
+          "max_ms": 0.01964324658
+        },
+        "mtf_decode": {
+          "median_ms": 0.199562875,
+          "min_ms": 0.1994003437,
+          "max_ms": 0.1998210195
+        },
+        "bwt_decode": {
+          "median_ms": 0.2712834687,
+          "min_ms": 0.2708264453,
+          "max_ms": 0.2714710078
+        },
+        "compress": {
+          "median_ms": 9.94307025,
+          "min_ms": 9.930334,
+          "max_ms": 10.01516825
+        },
+        "decompress": {
+          "median_ms": 0.6328932188,
+          "min_ms": 0.624836875,
+          "max_ms": 0.6375682812
+        }
+      },
+      "cli_ms": {
+        "compress": 14.346555,
+        "decompress": 4.19731
+      },
+      "rss_kib": {
+        "compress": 4732,
+        "decompress": 4168
+      }
+    },
+    {
+      "family": "periodic",
+      "size": 100000,
+      "input_sha256": "e06c5e73d8cf3a92c9b698974f71c49e487bf723fcf19595944131ddfd6ad733",
+      "runs": 14,
+      "encoded_bytes": 80,
+      "ratio": 0.0008,
+      "zero_fraction": 0.999920000799992,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 20.503104,
+          "min_ms": 20.200707,
+          "max_ms": 20.650711
+        },
+        "mtf_encode": {
+          "median_ms": 0.9237965938,
+          "min_ms": 0.9232853125,
+          "max_ms": 0.9247314688
+        },
+        "rle_encode": {
+          "median_ms": 0.1745743984,
+          "min_ms": 0.1523271641,
+          "max_ms": 0.1748365313
+        },
+        "rle_decode": {
+          "median_ms": 0.03203668066,
+          "min_ms": 0.03201737695,
+          "max_ms": 0.03206437988
+        },
+        "mtf_decode": {
+          "median_ms": 0.4031648203,
+          "min_ms": 0.40258475,
+          "max_ms": 0.4041773437
+        },
+        "bwt_decode": {
+          "median_ms": 0.5561219063,
+          "min_ms": 0.5439658125,
+          "max_ms": 0.5803536563
+        },
+        "compress": {
+          "median_ms": 21.151832,
+          "min_ms": 20.788891,
+          "max_ms": 21.512429
+        },
+        "decompress": {
+          "median_ms": 1.302844188,
+          "min_ms": 1.296103438,
+          "max_ms": 1.305422188
+        }
+      },
+      "cli_ms": {
+        "compress": 26.124468,
+        "decompress": 5.561071
+      },
+      "rss_kib": {
+        "compress": 5872,
+        "decompress": 4668
+      }
+    },
+    {
+      "family": "random2",
+      "size": 1000,
+      "input_sha256": "0ba0ce063febfb555570036deb9731dd5faf0395a23dca1fa0b39efb7bc7482d",
+      "runs": 483,
+      "encoded_bytes": 1935,
+      "ratio": 1.935,
+      "zero_fraction": 0.4875124875124875,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.05189107617,
+          "min_ms": 0.05163281836,
+          "max_ms": 0.05224688086
+        },
+        "mtf_encode": {
+          "median_ms": 0.01166418945,
+          "min_ms": 0.01161378662,
+          "max_ms": 0.01167596924
+        },
+        "rle_encode": {
+          "median_ms": 0.001088550049,
+          "min_ms": 0.00106669873,
+          "max_ms": 0.001125210083
+        },
+        "rle_decode": {
+          "median_ms": 0.003868314941,
+          "min_ms": 0.003858133423,
+          "max_ms": 0.003887920776
+        },
+        "mtf_decode": {
+          "median_ms": 0.003434055908,
+          "min_ms": 0.003408573608,
+          "max_ms": 0.003435138428
+        },
+        "bwt_decode": {
+          "median_ms": 0.003837643311,
+          "min_ms": 0.003833209961,
+          "max_ms": 0.00384309668
+        },
+        "compress": {
+          "median_ms": 0.06361693945,
+          "min_ms": 0.06345616797,
+          "max_ms": 0.06367863672
+        },
+        "decompress": {
+          "median_ms": 0.01138597656,
+          "min_ms": 0.01131153955,
+          "max_ms": 0.0114429292
+        }
+      },
+      "cli_ms": {
+        "compress": 3.561868,
+        "decompress": 3.612152
+      },
+      "rss_kib": {
+        "compress": 4096,
+        "decompress": 4112
+      }
+    },
+    {
+      "family": "random2",
+      "size": 5000,
+      "input_sha256": "f8f9d7c2555f60ada531ae3937bc393fe14afcc6078cb5c10f3e4856e8aa2751",
+      "runs": 2497,
+      "encoded_bytes": 9995,
+      "ratio": 1.999,
+      "zero_fraction": 0.50249950009998,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.2616528125,
+          "min_ms": 0.2604759922,
+          "max_ms": 0.2640936406
+        },
+        "mtf_encode": {
+          "median_ms": 0.06465073438,
+          "min_ms": 0.06403060547,
+          "max_ms": 0.06898095508
+        },
+        "rle_encode": {
+          "median_ms": 0.00552877832,
+          "min_ms": 0.005424407715,
+          "max_ms": 0.006041978516
+        },
+        "rle_decode": {
+          "median_ms": 0.02049152832,
+          "min_ms": 0.02035950391,
+          "max_ms": 0.02072852734
+        },
+        "mtf_decode": {
+          "median_ms": 0.01930661377,
+          "min_ms": 0.01922739307,
+          "max_ms": 0.01941360645
+        },
+        "bwt_decode": {
+          "median_ms": 0.018665875,
+          "min_ms": 0.01859074365,
+          "max_ms": 0.01874975781
+        },
+        "compress": {
+          "median_ms": 0.3411944844,
+          "min_ms": 0.33895075,
+          "max_ms": 0.34362875
+        },
+        "decompress": {
+          "median_ms": 0.06274718164,
+          "min_ms": 0.06189178711,
+          "max_ms": 0.06297129297
+        }
+      },
+      "cli_ms": {
+        "compress": 4.17606,
+        "decompress": 3.962749
+      },
+      "rss_kib": {
+        "compress": 4112,
+        "decompress": 4108
+      }
+    },
+    {
+      "family": "random2",
+      "size": 10000,
+      "input_sha256": "11107cebabb79a706750f99efc27e8857a3fefff20d68706c11aecb73b40e6b1",
+      "runs": 4944,
+      "encoded_bytes": 19792,
+      "ratio": 1.9792,
+      "zero_fraction": 0.5036496350364964,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.5639904531,
+          "min_ms": 0.5611727969,
+          "max_ms": 0.5749874844
+        },
+        "mtf_encode": {
+          "median_ms": 0.1305486953,
+          "min_ms": 0.1291495859,
+          "max_ms": 0.1326827031
+        },
+        "rle_encode": {
+          "median_ms": 0.02509399805,
+          "min_ms": 0.02485139355,
+          "max_ms": 0.02648199414
+        },
+        "rle_decode": {
+          "median_ms": 0.04307892773,
+          "min_ms": 0.04236538086,
+          "max_ms": 0.04802297461
+        },
+        "mtf_decode": {
+          "median_ms": 0.04654073828,
+          "min_ms": 0.04598353906,
+          "max_ms": 0.04688249414
+        },
+        "bwt_decode": {
+          "median_ms": 0.0456788457,
+          "min_ms": 0.04542186133,
+          "max_ms": 0.04589771484
+        },
+        "compress": {
+          "median_ms": 0.728200625,
+          "min_ms": 0.7247309687,
+          "max_ms": 0.731035
+        },
+        "decompress": {
+          "median_ms": 0.1442158789,
+          "min_ms": 0.1438651406,
+          "max_ms": 0.1454822773
+        }
+      },
+      "cli_ms": {
+        "compress": 5.580126,
+        "decompress": 3.709124
+      },
+      "rss_kib": {
+        "compress": 4096,
+        "decompress": 4212
+      }
+    },
+    {
+      "family": "random2",
+      "size": 50000,
+      "input_sha256": "1b7d327442a15b407d93707b67dc78b3183343bce2468b31be9a77d69914070e",
+      "runs": 25012,
+      "encoded_bytes": 100101,
+      "ratio": 2.00202,
+      "zero_fraction": 0.495130097398052,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 3.543417625,
+          "min_ms": 3.501187125,
+          "max_ms": 3.68100225
+        },
+        "mtf_encode": {
+          "median_ms": 0.6542185938,
+          "min_ms": 0.65346625,
+          "max_ms": 0.655489125
+        },
+        "rle_encode": {
+          "median_ms": 0.3563529531,
+          "min_ms": 0.3551846563,
+          "max_ms": 0.3589047656
+        },
+        "rle_decode": {
+          "median_ms": 0.2314494609,
+          "min_ms": 0.2301690156,
+          "max_ms": 0.2361134531
+        },
+        "mtf_decode": {
+          "median_ms": 0.2841905156,
+          "min_ms": 0.2830752109,
+          "max_ms": 0.2846283672
+        },
+        "bwt_decode": {
+          "median_ms": 0.2863930156,
+          "min_ms": 0.2850827344,
+          "max_ms": 0.2955219453
+        },
+        "compress": {
+          "median_ms": 4.433530125,
+          "min_ms": 4.364126,
+          "max_ms": 5.12280925
+        },
+        "decompress": {
+          "median_ms": 0.80653425,
+          "min_ms": 0.7989713125,
+          "max_ms": 0.8220906562
+        }
+      },
+      "cli_ms": {
+        "compress": 11.274167,
+        "decompress": 6.502719
+      },
+      "rss_kib": {
+        "compress": 4732,
+        "decompress": 4416
+      }
+    },
+    {
+      "family": "random2",
+      "size": 100000,
+      "input_sha256": "da6684a2a098e88b748bea25e048a677b79b06b1de1cf87bcf9ef108de0f561f",
+      "runs": 50064,
+      "encoded_bytes": 200347,
+      "ratio": 2.00347,
+      "zero_fraction": 0.4987850121498785,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 9.1405735,
+          "min_ms": 8.77123025,
+          "max_ms": 9.268281
+        },
+        "mtf_encode": {
+          "median_ms": 1.314963188,
+          "min_ms": 1.305920563,
+          "max_ms": 1.31878975
+        },
+        "rle_encode": {
+          "median_ms": 0.804744,
+          "min_ms": 0.7778904688,
+          "max_ms": 0.8119315625
+        },
+        "rle_decode": {
+          "median_ms": 0.4703843906,
+          "min_ms": 0.4689681406,
+          "max_ms": 0.4717414688
+        },
+        "mtf_decode": {
+          "median_ms": 0.5717864844,
+          "min_ms": 0.5702692656,
+          "max_ms": 0.5762842969
+        },
+        "bwt_decode": {
+          "median_ms": 0.8061497813,
+          "min_ms": 0.8054537813,
+          "max_ms": 0.810405875
+        },
+        "compress": {
+          "median_ms": 10.239364,
+          "min_ms": 9.8129485,
+          "max_ms": 10.631811
+        },
+        "decompress": {
+          "median_ms": 1.828571812,
+          "min_ms": 1.815449062,
+          "max_ms": 1.841000812
+        }
+      },
+      "cli_ms": {
+        "compress": 19.039546,
+        "decompress": 10.308113
+      },
+      "rss_kib": {
+        "compress": 5820,
+        "decompress": 5048
+      }
+    },
+    {
+      "family": "random26",
+      "size": 1000,
+      "input_sha256": "24473bbe1519ea8c553333bc8b182fa186e3e8fac28e1f893ebd989c60b39a40",
+      "runs": 964,
+      "encoded_bytes": 4465,
+      "ratio": 4.465,
+      "zero_fraction": 0.04195804195804196,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.02617181348,
+          "min_ms": 0.02587700098,
+          "max_ms": 0.02649849023
+        },
+        "mtf_encode": {
+          "median_ms": 0.01177388721,
+          "min_ms": 0.01172983496,
+          "max_ms": 0.01184162207
+        },
+        "rle_encode": {
+          "median_ms": 0.001159442444,
+          "min_ms": 0.001139207886,
+          "max_ms": 0.001561536499
+        },
+        "rle_decode": {
+          "median_ms": 0.007168116211,
+          "min_ms": 0.007137898193,
+          "max_ms": 0.007175003906
+        },
+        "mtf_decode": {
+          "median_ms": 0.006121025879,
+          "min_ms": 0.006118709473,
+          "max_ms": 0.00613040625
+        },
+        "bwt_decode": {
+          "median_ms": 0.002936367432,
+          "min_ms": 0.002896265381,
+          "max_ms": 0.002949067017
+        },
+        "compress": {
+          "median_ms": 0.03852428125,
+          "min_ms": 0.03829083594,
+          "max_ms": 0.03884456055
+        },
+        "decompress": {
+          "median_ms": 0.02058503467,
+          "min_ms": 0.02050511426,
+          "max_ms": 0.02083441895
+        }
+      },
+      "cli_ms": {
+        "compress": 3.448825,
+        "decompress": 3.905392
+      },
+      "rss_kib": {
+        "compress": 4084,
+        "decompress": 4128
+      }
+    },
+    {
+      "family": "random26",
+      "size": 5000,
+      "input_sha256": "1bb66c9cb5310b4537af7ee4da0ca89c8f52c00ba33eaf1cd2b9231a7d3dfdfe",
+      "runs": 4790,
+      "encoded_bytes": 22080,
+      "ratio": 4.416,
+      "zero_fraction": 0.03479304139172166,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.1532377773,
+          "min_ms": 0.1528054023,
+          "max_ms": 0.1535086797
+        },
+        "mtf_encode": {
+          "median_ms": 0.07694988281,
+          "min_ms": 0.07691491406,
+          "max_ms": 0.07864104492
+        },
+        "rle_encode": {
+          "median_ms": 0.005935812256,
+          "min_ms": 0.005873559326,
+          "max_ms": 0.005956084717
+        },
+        "rle_decode": {
+          "median_ms": 0.03655576172,
+          "min_ms": 0.0364621582,
+          "max_ms": 0.03659751953
+        },
+        "mtf_decode": {
+          "median_ms": 0.03711831152,
+          "min_ms": 0.03638725195,
+          "max_ms": 0.04463799609
+        },
+        "bwt_decode": {
+          "median_ms": 0.01408893652,
+          "min_ms": 0.01390420557,
+          "max_ms": 0.01411942871
+        },
+        "compress": {
+          "median_ms": 0.2406510391,
+          "min_ms": 0.2400920156,
+          "max_ms": 0.2415992266
+        },
+        "decompress": {
+          "median_ms": 0.1184610781,
+          "min_ms": 0.11740625,
+          "max_ms": 0.1189442539
+        }
+      },
+      "cli_ms": {
+        "compress": 4.206528,
+        "decompress": 3.724663
+      },
+      "rss_kib": {
+        "compress": 4256,
+        "decompress": 4128
+      }
+    },
+    {
+      "family": "random26",
+      "size": 10000,
+      "input_sha256": "8c81275382f2e5ff9330fa32865db0777e426f119aecd77b1d350f8e08dc1f45",
+      "runs": 9591,
+      "encoded_bytes": 44207,
+      "ratio": 4.4207,
+      "zero_fraction": 0.039396060393960604,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.3214278437,
+          "min_ms": 0.3183732031,
+          "max_ms": 0.350487875
+        },
+        "mtf_encode": {
+          "median_ms": 0.1637695859,
+          "min_ms": 0.1635690469,
+          "max_ms": 0.1648488672
+        },
+        "rle_encode": {
+          "median_ms": 0.01215996387,
+          "min_ms": 0.01202246924,
+          "max_ms": 0.01219395361
+        },
+        "rle_decode": {
+          "median_ms": 0.07316281055,
+          "min_ms": 0.07272425195,
+          "max_ms": 0.07386035156
+        },
+        "mtf_decode": {
+          "median_ms": 0.09334022461,
+          "min_ms": 0.08246376953,
+          "max_ms": 0.09410842383
+        },
+        "bwt_decode": {
+          "median_ms": 0.03717993164,
+          "min_ms": 0.03697416406,
+          "max_ms": 0.0373503291
+        },
+        "compress": {
+          "median_ms": 0.5229903281,
+          "min_ms": 0.5213799688,
+          "max_ms": 0.5256284219
+        },
+        "decompress": {
+          "median_ms": 0.257169,
+          "min_ms": 0.2485514922,
+          "max_ms": 0.3245561484
+        }
+      },
+      "cli_ms": {
+        "compress": 4.570551,
+        "decompress": 5.067194
+      },
+      "rss_kib": {
+        "compress": 4352,
+        "decompress": 4156
+      }
+    },
+    {
+      "family": "random26",
+      "size": 50000,
+      "input_sha256": "1f6bb4d016a96569e5f2cd8add75eb328124bb97284435b747f6f6c7c1803a16",
+      "runs": 48100,
+      "encoded_bytes": 222009,
+      "ratio": 4.44018,
+      "zero_fraction": 0.0377992440151197,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 2.38763275,
+          "min_ms": 2.244887875,
+          "max_ms": 2.415619688
+        },
+        "mtf_encode": {
+          "median_ms": 0.8293664687,
+          "min_ms": 0.8261185,
+          "max_ms": 0.8336482813
+        },
+        "rle_encode": {
+          "median_ms": 0.4042209375,
+          "min_ms": 0.3914339688,
+          "max_ms": 0.4116397187
+        },
+        "rle_decode": {
+          "median_ms": 0.3637194375,
+          "min_ms": 0.3613874062,
+          "max_ms": 0.3644894687
+        },
+        "mtf_decode": {
+          "median_ms": 0.4735065,
+          "min_ms": 0.46061025,
+          "max_ms": 0.4761178125
+        },
+        "bwt_decode": {
+          "median_ms": 0.2454586562,
+          "min_ms": 0.2417441016,
+          "max_ms": 0.2456850234
+        },
+        "compress": {
+          "median_ms": 3.321154125,
+          "min_ms": 3.312585625,
+          "max_ms": 3.372925125
+        },
+        "decompress": {
+          "median_ms": 1.320691438,
+          "min_ms": 1.31219425,
+          "max_ms": 1.344866219
+        }
+      },
+      "cli_ms": {
+        "compress": 11.263397,
+        "decompress": 9.827712
+      },
+      "rss_kib": {
+        "compress": 4692,
+        "decompress": 4532
+      }
+    },
+    {
+      "family": "random26",
+      "size": 100000,
+      "input_sha256": "d90d72ecb79eeefbbdcb14e0f49fe2ff37021eee15787093513a9a1b94b75931",
+      "runs": 96087,
+      "encoded_bytes": 443516,
+      "ratio": 4.43516,
+      "zero_fraction": 0.03855961440385596,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 4.792072,
+          "min_ms": 4.71473425,
+          "max_ms": 4.95570675
+        },
+        "mtf_encode": {
+          "median_ms": 1.669619688,
+          "min_ms": 1.66239425,
+          "max_ms": 1.795269313
+        },
+        "rle_encode": {
+          "median_ms": 0.8732902188,
+          "min_ms": 0.8663875625,
+          "max_ms": 0.8874289375
+        },
+        "rle_decode": {
+          "median_ms": 0.7291426875,
+          "min_ms": 0.72867275,
+          "max_ms": 0.732463
+        },
+        "mtf_decode": {
+          "median_ms": 0.8082480937,
+          "min_ms": 0.8060987188,
+          "max_ms": 0.812405875
+        },
+        "bwt_decode": {
+          "median_ms": 0.7068809062,
+          "min_ms": 0.7048477187,
+          "max_ms": 0.7116842813
+        },
+        "compress": {
+          "median_ms": 7.21194275,
+          "min_ms": 7.0986475,
+          "max_ms": 7.36224225
+        },
+        "decompress": {
+          "median_ms": 2.806671312,
+          "min_ms": 2.795288063,
+          "max_ms": 2.842181125
+        }
+      },
+      "cli_ms": {
+        "compress": 18.859909,
+        "decompress": 14.229154
+      },
+      "rss_kib": {
+        "compress": 5856,
+        "decompress": 5472
+      }
+    },
+    {
+      "family": "blocks",
+      "size": 1000,
+      "input_sha256": "ba91f1a193cfcc4c7ee1cae06c6e43e1b7902d02e89ddcb91c49659437402358",
+      "runs": 48,
+      "encoded_bytes": 219,
+      "ratio": 0.219,
+      "zero_fraction": 0.968031968031968,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.0746314668,
+          "min_ms": 0.07460156641,
+          "max_ms": 0.07496192969
+        },
+        "mtf_encode": {
+          "median_ms": 0.00959513623,
+          "min_ms": 0.009550491699,
+          "max_ms": 0.009616832275
+        },
+        "rle_encode": {
+          "median_ms": 0.001573970093,
+          "min_ms": 0.001453911926,
+          "max_ms": 0.001584102051
+        },
+        "rle_decode": {
+          "median_ms": 0.0007441002808,
+          "min_ms": 0.0007411378784,
+          "max_ms": 0.0007483991089
+        },
+        "mtf_decode": {
+          "median_ms": 0.004197602539,
+          "min_ms": 0.004096094849,
+          "max_ms": 0.00459698645
+        },
+        "bwt_decode": {
+          "median_ms": 0.005024379639,
+          "min_ms": 0.005014801025,
+          "max_ms": 0.005028300293
+        },
+        "compress": {
+          "median_ms": 0.08501125,
+          "min_ms": 0.08456153906,
+          "max_ms": 0.08507695703
+        },
+        "decompress": {
+          "median_ms": 0.009776063965,
+          "min_ms": 0.009708241699,
+          "max_ms": 0.009816379395
+        }
+      },
+      "cli_ms": {
+        "compress": 4.561614,
+        "decompress": 3.292421
+      },
+      "rss_kib": {
+        "compress": 4096,
+        "decompress": 4016
+      }
+    },
+    {
+      "family": "blocks",
+      "size": 5000,
+      "input_sha256": "859a829d918875e89a2c3544e89517e28e83a8a04a3036b20443feb6a5f8a323",
+      "runs": 268,
+      "encoded_bytes": 1235,
+      "ratio": 0.247,
+      "zero_fraction": 0.9640071985602879,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.4227059687,
+          "min_ms": 0.3945217969,
+          "max_ms": 0.4243153906
+        },
+        "mtf_encode": {
+          "median_ms": 0.04811060156,
+          "min_ms": 0.0478580957,
+          "max_ms": 0.04820922266
+        },
+        "rle_encode": {
+          "median_ms": 0.004102418945,
+          "min_ms": 0.003979392578,
+          "max_ms": 0.004115920898
+        },
+        "rle_decode": {
+          "median_ms": 0.003753816528,
+          "min_ms": 0.003746850342,
+          "max_ms": 0.003781116333
+        },
+        "mtf_decode": {
+          "median_ms": 0.02034378076,
+          "min_ms": 0.0203009126,
+          "max_ms": 0.02044227637
+        },
+        "bwt_decode": {
+          "median_ms": 0.02542382715,
+          "min_ms": 0.02537081641,
+          "max_ms": 0.02548672754
+        },
+        "compress": {
+          "median_ms": 0.4713835937,
+          "min_ms": 0.4709492031,
+          "max_ms": 0.4747370781
+        },
+        "decompress": {
+          "median_ms": 0.04952288086,
+          "min_ms": 0.04909254102,
+          "max_ms": 0.04959461719
+        }
+      },
+      "cli_ms": {
+        "compress": 4.719841,
+        "decompress": 3.608335
+      },
+      "rss_kib": {
+        "compress": 4028,
+        "decompress": 4080
+      }
+    },
+    {
+      "family": "blocks",
+      "size": 10000,
+      "input_sha256": "2c332b2cf0be5237853f4918e98226a5c86b1933ef7bc5a364bfa08c8bee631e",
+      "runs": 538,
+      "encoded_bytes": 2460,
+      "ratio": 0.246,
+      "zero_fraction": 0.9635036496350365,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 0.7767239062,
+          "min_ms": 0.7747505313,
+          "max_ms": 0.77929875
+        },
+        "mtf_encode": {
+          "median_ms": 0.09771220312,
+          "min_ms": 0.09524029688,
+          "max_ms": 0.09999191016
+        },
+        "rle_encode": {
+          "median_ms": 0.007730798828,
+          "min_ms": 0.007692777832,
+          "max_ms": 0.008084881348
+        },
+        "rle_decode": {
+          "median_ms": 0.007406006592,
+          "min_ms": 0.007358857422,
+          "max_ms": 0.007423994629
+        },
+        "mtf_decode": {
+          "median_ms": 0.04067751367,
+          "min_ms": 0.04066150684,
+          "max_ms": 0.04077947266
+        },
+        "bwt_decode": {
+          "median_ms": 0.0524404668,
+          "min_ms": 0.05243308984,
+          "max_ms": 0.052469625
+        },
+        "compress": {
+          "median_ms": 0.8786474375,
+          "min_ms": 0.875212875,
+          "max_ms": 0.8811825313
+        },
+        "decompress": {
+          "median_ms": 0.09997261719,
+          "min_ms": 0.09970211328,
+          "max_ms": 0.1005339453
+        }
+      },
+      "cli_ms": {
+        "compress": 5.033,
+        "decompress": 3.502626
+      },
+      "rss_kib": {
+        "compress": 4144,
+        "decompress": 4016
+      }
+    },
+    {
+      "family": "blocks",
+      "size": 50000,
+      "input_sha256": "18b42c8c791be1cd09e33dcae3f2e88680e83944d2542ef8e317f2baf72fbf6c",
+      "runs": 2755,
+      "encoded_bytes": 12491,
+      "ratio": 0.24982,
+      "zero_fraction": 0.9623207535849283,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 4.667822375,
+          "min_ms": 4.643683375,
+          "max_ms": 4.705082375
+        },
+        "mtf_encode": {
+          "median_ms": 0.4768447969,
+          "min_ms": 0.4764972656,
+          "max_ms": 0.477231
+        },
+        "rle_encode": {
+          "median_ms": 0.03893855664,
+          "min_ms": 0.03827541602,
+          "max_ms": 0.03995350781
+        },
+        "rle_decode": {
+          "median_ms": 0.03788686426,
+          "min_ms": 0.03764451465,
+          "max_ms": 0.03880378027
+        },
+        "mtf_decode": {
+          "median_ms": 0.2063413086,
+          "min_ms": 0.2041583789,
+          "max_ms": 0.2227183047
+        },
+        "bwt_decode": {
+          "median_ms": 0.2962155938,
+          "min_ms": 0.2953223516,
+          "max_ms": 0.2975658594
+        },
+        "compress": {
+          "median_ms": 5.21856775,
+          "min_ms": 5.15661875,
+          "max_ms": 5.28942325
+        },
+        "decompress": {
+          "median_ms": 0.6882794062,
+          "min_ms": 0.6824375,
+          "max_ms": 0.6936516875
+        }
+      },
+      "cli_ms": {
+        "compress": 9.780272,
+        "decompress": 4.031308
+      },
+      "rss_kib": {
+        "compress": 4732,
+        "decompress": 4284
+      }
+    },
+    {
+      "family": "blocks",
+      "size": 100000,
+      "input_sha256": "99104217efbff3b9eb37c9eee227503fd16ca81075d7127681ac7cb776387763",
+      "runs": 5372,
+      "encoded_bytes": 24380,
+      "ratio": 0.2438,
+      "zero_fraction": 0.9629903700962991,
+      "stages": {
+        "bwt_encode": {
+          "median_ms": 10.044789,
+          "min_ms": 9.809537,
+          "max_ms": 10.4578495
+        },
+        "mtf_encode": {
+          "median_ms": 0.9486429375,
+          "min_ms": 0.9479246875,
+          "max_ms": 0.9493335938
+        },
+        "rle_encode": {
+          "median_ms": 0.1490915977,
+          "min_ms": 0.07495999219,
+          "max_ms": 0.1492543633
+        },
+        "rle_decode": {
+          "median_ms": 0.07362576953,
+          "min_ms": 0.07338664844,
+          "max_ms": 0.07492105273
+        },
+        "mtf_decode": {
+          "median_ms": 0.40361825,
+          "min_ms": 0.4032148359,
+          "max_ms": 0.4083681016
+        },
+        "bwt_decode": {
+          "median_ms": 0.6928379688,
+          "min_ms": 0.6911792187,
+          "max_ms": 0.6941689063
+        },
+        "compress": {
+          "median_ms": 10.958269,
+          "min_ms": 10.805011,
+          "max_ms": 10.974334
+        },
+        "decompress": {
+          "median_ms": 1.522462125,
+          "min_ms": 1.51168375,
+          "max_ms": 1.535935562
+        }
+      },
+      "cli_ms": {
+        "compress": 18.223874,
+        "decompress": 6.83397
+      },
+      "rss_kib": {
+        "compress": 5892,
+        "decompress": 4796
+      }
+    }
+  ]
+}

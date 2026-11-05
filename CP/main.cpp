@@ -1,8 +1,6 @@
 #include <algorithm>
 #include <array>
-#include <exception>
 #include <iostream>
-#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -86,9 +84,6 @@ public:
                 row = i;
             }
         }
-        if (frequency[static_cast<unsigned char>('$')] != 1) {
-            throw std::invalid_argument("Результат BWT должен содержать ровно один символ '$'");
-        }
         for (int i = 1; i < 256; ++i) {
             start[i] = start[i - 1] + frequency[i - 1];
         }
@@ -116,9 +111,6 @@ public:
         codes.reserve(text.size());
         for (char ch : text) {
             const auto it = std::find(alphabet.begin(), alphabet.end(), ch);
-            if (it == alphabet.end()) {
-                throw std::invalid_argument("Недопустимый символ");
-            }
             const int position = static_cast<int>(it - alphabet.begin());
             codes.push_back(position);
             moveToFront(alphabet, position);
@@ -131,9 +123,6 @@ public:
         std::string text;
         text.reserve(codes.size());
         for (int position : codes) {
-            if (position < 0 || position >= static_cast<int>(alphabet.size())) {
-                throw std::invalid_argument("Код MTF должен быть от 0 до 26");
-            }
             text.push_back(alphabet[position]);
             moveToFront(alphabet, position);
         }
@@ -181,10 +170,6 @@ public:
     std::vector<int> decode(const std::vector<Run>& runs) const {
         std::size_t size = 0;
         for (const Run& run : runs) {
-            if (run.count <= 0 || run.value < 0 || run.value > 26 ||
-                static_cast<std::size_t>(run.count) > maxEncodedSize - size) {
-                throw std::invalid_argument("Некорректная пара RLE или превышена максимальная длина текста");
-            }
             size += static_cast<std::size_t>(run.count);
         }
         std::vector<int> codes;
@@ -194,20 +179,11 @@ public:
         }
         return codes;
     }
-
-private:
-    static constexpr std::size_t maxEncodedSize = 100001;
 };
 
 class TextCompressor {
 public:
     std::vector<Run> compress(const std::string& text) const {
-        if (text.size() > 100000 ||
-            !std::all_of(text.begin(), text.end(), [](char ch) {
-                return ch >= 'a' && ch <= 'z';
-            })) {
-            throw std::invalid_argument("Ожидается не более 100000 строчных латинских букв");
-        }
         return rle_.encode(mtf_.encode(bwt_.encode(text)));
     }
 
@@ -225,37 +201,24 @@ int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
-    try {
-        std::string command;
-        if (!(std::cin >> command)) {
-            return 0;
+    std::string command;
+    if (!(std::cin >> command)) {
+        return 0;
+    }
+    const TextCompressor compressor;
+    if (command == "compress") {
+        std::string text;
+        std::cin >> text;
+        for (const Run& run : compressor.compress(text)) {
+            std::cout << run.count << ' ' << run.value << '\n';
         }
-        const TextCompressor compressor;
-        if (command == "compress") {
-            std::string text;
-            std::cin >> text;
-            for (const Run& run : compressor.compress(text)) {
-                std::cout << run.count << ' ' << run.value << '\n';
-            }
-        } else if (command == "decompress") {
-            std::vector<Run> runs;
-            int count;
-            while (std::cin >> count) {
-                int value;
-                if (!(std::cin >> value)) {
-                    throw std::invalid_argument("Неполная пара RLE");
-                }
-                runs.push_back({count, value});
-            }
-            if (!std::cin.eof()) {
-                throw std::invalid_argument("Ожидаются пары целых чисел RLE");
-            }
-            std::cout << compressor.decompress(runs) << '\n';
-        } else {
-            throw std::invalid_argument("Ожидается команда compress или decompress");
+    } else if (command == "decompress") {
+        std::vector<Run> runs;
+        int count;
+        int value;
+        while (std::cin >> count >> value) {
+            runs.push_back({count, value});
         }
-    } catch (const std::exception& error) {
-        std::cerr << error.what() << '\n';
-        return 1;
+        std::cout << compressor.decompress(runs) << '\n';
     }
 }
